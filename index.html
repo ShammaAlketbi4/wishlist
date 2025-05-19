@@ -67,10 +67,10 @@
   <div class="category">
     <h2>Makeup</h2>
     <div class="items">
-      <div class="item" data-link="https://example.com/product1">
+      <div class="item" data-id="makeup-1" data-link="https://example.com/product1">
         <img src="https://via.placeholder.com/150x150.png?text=Makeup+1" alt="Makeup 1">
       </div>
-      <div class="item" data-link="https://example.com/product2">
+      <div class="item" data-id="makeup-2" data-link="https://example.com/product2">
         <img src="https://via.placeholder.com/150x150.png?text=Makeup+2" alt="Makeup 2">
       </div>
     </div>
@@ -79,28 +79,30 @@
   <div class="category">
     <h2>Bags</h2>
     <div class="items">
-      <div class="item" data-link="https://example.com/bag1">
+      <div class="item" data-id="bag-1" data-link="https://example.com/bag1">
         <img src="https://via.placeholder.com/150x150.png?text=Bag+1" alt="Bag 1">
       </div>
     </div>
   </div>
 
   <script>
-    document.querySelectorAll('.item').forEach((item, index) => {
-      const id = `item-${index}`;
-  
-      // Load saved state from localStorage
-      if (localStorage.getItem(id) === 'crossed') {
+    document.querySelectorAll('.item').forEach(item => {
+      const id = item.getAttribute('data-id');
+      const savedState = localStorage.getItem(id);
+
+      // Restore previous state
+      if (savedState === 'crossed') {
         item.classList.add('crossed');
       }
-  
+
       let pressTimer;
+
       item.addEventListener('click', () => {
         if (!item.classList.contains('crossed')) {
           window.open(item.getAttribute('data-link'), '_blank');
         }
       });
-  
+
       item.addEventListener('mousedown', () => {
         pressTimer = setTimeout(() => {
           item.classList.toggle('crossed');
@@ -109,13 +111,12 @@
           } else {
             localStorage.removeItem(id);
           }
-        }, 700); // Long press time
+        }, 700);
       });
-  
+
       item.addEventListener('mouseup', () => clearTimeout(pressTimer));
       item.addEventListener('mouseleave', () => clearTimeout(pressTimer));
     });
   </script>
-  
 </body>
 </html>

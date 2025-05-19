@@ -7,33 +7,39 @@
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #ffe6f0;
+      background-color: #fff0f5;
       color: #5e335f;
       margin: 0;
       padding: 20px;
     }
     h1 {
       text-align: center;
-      font-size: 2.5em;
+      font-size: 2.8em;
+      color: #cc6699;
+      margin-bottom: 10px;
     }
     .category {
-      margin-top: 30px;
+      margin-top: 40px;
     }
     .category h2 {
-      border-bottom: 2px solid #ffb6c1;
-      padding-bottom: 10px;
       font-size: 1.8em;
+      border-left: 5px solid #ffc0cb;
+      padding-left: 10px;
+      margin-bottom: 15px;
+      color: #cc3366;
     }
     .items {
       display: flex;
       flex-wrap: wrap;
-      gap: 15px;
+      gap: 20px;
     }
     .item {
-      width: 150px;
+      width: 160px;
+      background: #fff;
       border: 2px solid #ffc0cb;
-      border-radius: 10px;
+      border-radius: 15px;
       overflow: hidden;
+      box-shadow: 0 4px 8px rgba(255, 192, 203, 0.3);
       position: relative;
       cursor: pointer;
       transition: transform 0.2s;
@@ -58,14 +64,15 @@
       justify-content: center;
       align-items: center;
       text-decoration: line-through;
+      border-radius: 15px;
     }
   </style>
 </head>
 <body>
-  <h1>My Wishlist</h1>
+  <h1>🌸 My Wishlist 🌸</h1>
 
   <div class="category">
-    <h2>Makeup</h2>
+    <h2>💄 Makeup</h2>
     <div class="items">
       <div class="item" data-id="makeup-1" data-link="https://example.com/product1">
         <img src="https://via.placeholder.com/150x150.png?text=Makeup+1" alt="Makeup 1">
@@ -77,11 +84,32 @@
   </div>
 
   <div class="category">
-    <h2>Bags</h2>
+    <h2>👜 Bags</h2>
     <div class="items">
-      <div class="item" data-id="bag-1" data-link="https://example.com/bag1">
+      <div class="item" data-id="bags-1" data-link="https://example.com/bag1">
         <img src="https://via.placeholder.com/150x150.png?text=Bag+1" alt="Bag 1">
       </div>
+    </div>
+  </div>
+
+  <div class="category">
+    <h2>👠 Shoes</h2>
+    <div class="items">
+      <!-- Add shoes here -->
+    </div>
+  </div>
+
+  <div class="category">
+    <h2>💍 Accessories</h2>
+    <div class="items">
+      <!-- Add accessories here -->
+    </div>
+  </div>
+
+  <div class="category">
+    <h2>🎁 Others / General</h2>
+    <div class="items">
+      <!-- Add others here -->
     </div>
   </div>
 

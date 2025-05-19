@@ -86,27 +86,36 @@
   </div>
 
   <script>
-    document.querySelectorAll('.item').forEach(item => {
+    document.querySelectorAll('.item').forEach((item, index) => {
+      const id = `item-${index}`;
+  
+      // Load saved state from localStorage
+      if (localStorage.getItem(id) === 'crossed') {
+        item.classList.add('crossed');
+      }
+  
       let pressTimer;
       item.addEventListener('click', () => {
         if (!item.classList.contains('crossed')) {
           window.open(item.getAttribute('data-link'), '_blank');
         }
       });
-
+  
       item.addEventListener('mousedown', () => {
         pressTimer = setTimeout(() => {
           item.classList.toggle('crossed');
-        }, 700); // Long press duration
+          if (item.classList.contains('crossed')) {
+            localStorage.setItem(id, 'crossed');
+          } else {
+            localStorage.removeItem(id);
+          }
+        }, 700); // Long press time
       });
-
-      item.addEventListener('mouseup', () => {
-        clearTimeout(pressTimer);
-      });
-      item.addEventListener('mouseleave', () => {
-        clearTimeout(pressTimer);
-      });
+  
+      item.addEventListener('mouseup', () => clearTimeout(pressTimer));
+      item.addEventListener('mouseleave', () => clearTimeout(pressTimer));
     });
   </script>
+  
 </body>
 </html>

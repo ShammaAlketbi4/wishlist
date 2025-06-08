@@ -98,8 +98,8 @@
     <h2>Bags</h2>
     <div class="description">Stylish and cute bags I love!</div>
     <div class="items">
-      <div class="item" data-id="bags-1" data-link="https://example.com/bag1">
-        <img src="https://via.placeholder.com/150x150.png?text=Bag+1" alt="Bag 1">
+      <div class="item" data-id="bags-2" data-link="https://www.ysl.com/en-ae/le-5-a-7-hobo-bag-in-smooth-leather">
+        <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSYEdq_zCFw08G990Z0NdYFWVxbLF6qazt3Kx63dRKczWyfU2Jks1iqkOAKuy1tAzc1GncH4XFXCTQj6a6KVdC5MfWR9796XHBeJDRXW2eXXx5XG6PVmMcvboC5_m6k7U8LnePMSCkkuQ&usqp=CAc" alt="YSL Le 5 À 7 Hobo Bag">
       </div>
     </div>
   </div>
@@ -108,7 +108,9 @@
     <h2>Shoes</h2>
     <div class="description">My shoe size is 40 👟</div>
     <div class="items">
-      <!-- Add shoes here -->
+      <div class="item" data-id="shoes-1" data-link="https://www.hermes.com/dh/en/product/oasis-sandal-H151215ZvX3350/">
+        <img src="https://raw.githubusercontent.com/shammaalketbi4/wishlist/main/oasis-sandal.png" alt="Hermès Oasis Sandal">
+      </div>
     </div>
   </div>
 
@@ -133,7 +135,6 @@
       const id = item.getAttribute('data-id');
       const savedState = localStorage.getItem(id);
 
-      // Restore previous state
       if (savedState === 'crossed') {
         item.classList.add('crossed');
       }

@@ -58,7 +58,7 @@
       display: block;
     }
     .item.crossed::after {
-      content: "✨ It's mine now! ✨";
+      content: "\2728 It's mine now! ✨";
       position: absolute;
       top: 0;
       left: 0;
@@ -75,6 +75,11 @@
       border-radius: 15px;
       text-align: center;
       padding: 10px;
+    }
+    .caption {
+      font-size: 0.85em;
+      text-align: center;
+      padding: 5px 8px 10px;
     }
   </style>
 </head>
@@ -98,18 +103,20 @@
     <h2>Bags</h2>
     <div class="description">Stylish and cute bags I love!</div>
     <div class="items">
-      <div class="item" data-id="bags-2" data-link="https://www.ysl.com/en-ae/le-5-a-7-hobo-bag-in-smooth-leather">
-        <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSYEdq_zCFw08G990Z0NdYFWVxbLF6qazt3Kx63dRKczWyfU2Jks1iqkOAKuy1tAzc1GncH4XFXCTQj6a6KVdC5MfWR9796XHBeJDRXW2eXXx5XG6PVmMcvboC5_m6k7U8LnePMSCkkuQ&usqp=CAc" alt="YSL Le 5 À 7 Hobo Bag">
+      <div class="item" data-id="bags-1" data-link="https://www.hermes.com/dh/en/product/oasis-sandal-H151215ZvX3350/">
+        <img src="https://assets.hermes.com/is/image/hermesproduct/oasis-sandal--151215Z%20X3-front-wm-1-0-0-800-800_g.jpg" alt="Hermès Oasis Sandal">
+        <div class="caption">Hermès Oasis Sandal<br>from: Hermès<br>size: 40<br>color: étoupe</div>
       </div>
     </div>
   </div>
 
   <div class="category">
     <h2>Shoes</h2>
-    <div class="description">from: Hermès<br>size: 40<br>color: étoupe</div>
+    <div class="description">My shoe size is 40 👟</div>
     <div class="items">
       <div class="item" data-id="shoes-1" data-link="https://www.hermes.com/dh/en/product/oasis-sandal-H151215ZvX3350/">
         <img src="https://assets.hermes.com/is/image/hermesproduct/oasis-sandal--151215Z%20X3-front-wm-1-0-0-800-800_g.jpg" alt="Hermès Oasis Sandal">
+        <div class="caption">Hermès Oasis Sandal<br>from: Hermès<br>size: 40<br>color: étoupe</div>
       </div>
     </div>
   </div>

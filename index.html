@@ -18,6 +18,18 @@
       font-size: 3em;
       margin-bottom: 10px;
     }
+    .instructions {
+      text-align: center;
+      font-size: 1em;
+      margin-bottom: 20px;
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      border: 2px solid #ffc0cb;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
     .category {
       margin-top: 40px;
     }
@@ -26,15 +38,6 @@
       border-left: 5px solid #ffc0cb;
       padding-left: 10px;
       margin-bottom: 10px;
-    }
-    .description {
-      font-size: 0.95em;
-      margin-bottom: 15px;
-      background-color: #fff;
-      border-left: 4px solid #ffc0cb;
-      padding: 8px 12px;
-      border-radius: 8px;
-      max-width: 400px;
     }
     .items {
       display: flex;
@@ -64,7 +67,7 @@
       background-color: #fff;
     }
     .item.crossed::after {
-      content: "\2728 It's mine now! ✨";
+      content: "\2728 Got it!";
       position: absolute;
       top: 0;
       left: 0;
@@ -86,10 +89,13 @@
 </head>
 <body>
   <h1>Shamma's Wishlist</h1>
+  <div class="instructions">
+    Click an item to open the shopping page.<br>
+    Hold for 1 second to mark as purchased.
+  </div>
 
   <div class="category">
     <h2>Makeup</h2>
-    
     <div class="items">
       <!-- Makeup items go here -->
     </div>
@@ -97,18 +103,24 @@
 
   <div class="category">
     <h2>Bags</h2>
-    
     <div class="items">
       <div class="item" data-id="bags-1" data-link="https://www.ounass.ae/shop-saint-laurent-le-5-a-7-hobo-bag-in-smooth-leather-for-women-214361034_13.html">
         <img src="https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/214361034_black_in.jpg?ts=1700486056.7924" alt="Saint Laurent Le 5 À 7 Hobo Bag">
         <div class="caption">Le 5 À 7 Hobo Bag in Smooth Leather<br>from: SAINT LAURENT<br>color: Black</div>
+      </div>
+      <div class="item" data-id="bags-2" data-link="https://www.ounass.ae/shop-coach-zoe-shoulder-bag-in-leather-for-women-218136771_13.html">
+        <img src="https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/218136771_black_in.jpg?ts=1745500836.4412" alt="Coach Zoe Shoulder Bag">
+        <div class="caption">Zoe Shoulder Bag in Leather<br>from: Coach<br>color: Black</div>
+      </div>
+      <div class="item" data-id="bags-3" data-link="https://www.ounass.ae/shop-coach-tabby-chain-clutch-in-leather-for-women-215731967_15.html">
+        <img src="https://ounass-ae.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/215731967_drkstne_in.jpg?ts=1742193126.642" alt="Coach Tabby Chain Clutch">
+        <div class="caption">Tabby Chain Clutch in Leather<br>from: Coach<br>color: Brown</div>
       </div>
     </div>
   </div>
 
   <div class="category">
     <h2>Shoes</h2>
-    
     <div class="items">
       <div class="item" data-id="shoes-1" data-link="https://www.hermes.com/dh/en/product/oasis-sandal-H151215ZvX3350/">
         <img src="https://assets.hermes.com/is/image/hermesproduct/oasis-sandal--151215Z%20X3-front-wm-1-0-0-800-800_g.jpg" alt="Hermès Oasis Sandal">
@@ -119,7 +131,6 @@
 
   <div class="category">
     <h2>Accessories</h2>
-    
     <div class="items">
       <!-- Add accessories here -->
     </div>
@@ -127,7 +138,6 @@
 
   <div class="category">
     <h2>Others</h2>
-    
     <div class="items">
       <!-- Add others here -->
     </div>
